@@ -8,5 +8,11 @@ namespace Dominio
 {
     public class Turnos
     {
+        enum FranjaHoraria {Matutino, Tarde, Noche};
+        DateTime fecha;
+        int NumCancha;
+        bool estado;
+
+
     }
 }
