@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace Dominio
 {
-    public class Persona
+    public  class Persona
     {
-        string nombre;
-        string apellido;
-        int edad;
-        string documento;
-        string direccion;
-        string correoElectronico;
-        int telefono;
+        protected string nombre;
+        protected string apellido;
+        protected int edad;
+        protected string documento;
+        protected string direccion;
+        protected string correoElectronico;
+        enum tipoDocumento { DNI, LE, Pasaporte}
+        protected int telefono;
+
+    
 
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }

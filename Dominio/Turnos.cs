@@ -13,6 +13,8 @@ namespace Dominio
         int NumCancha;
         bool estado;
 
-
+        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public int NumCancha1 { get => NumCancha; set => NumCancha = value; }
+        public bool Estado { get => estado; set => estado = value; }
     }
 }
