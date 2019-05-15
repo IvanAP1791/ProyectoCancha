@@ -12,33 +12,10 @@ namespace Repositorio
 {
     public class CanchaRepo
     {
+       
         string cnn = ConfigurationManager.ConnectionStrings["ConexionBaseDeDatos"].ConnectionString;
 
-        public void GuardarCliente(Persona persona)
-        {
-            SqlConnection conn = new SqlConnection(cnn);
-
-            {
-
-                conn.Open();
-                //string query = "insert into Persona (nombre, apellido) values (@nombre, @apellido)";
-
-                //string query = "INSERT INTO dbo.Cliente ( idCliente, nombre, apellido, edad, documento, direccion, correoElectronico, telefono  ) VALUES  ( '', '', '', '', '', '', '', '')";
-                //SqlCommand cmd = new SqlCommand(query, conn);
-                //cmd.Parameters.AddWithValue("@idCliente", cliente.IdCliente);
-                //cmd.Parameters.AddWithValue("@nombre", persona.Nombre);
-                //cmd.Parameters.AddWithValue("@apellido", persona.Apellido);
-                //cmd.Parameters.AddWithValue("@edad", cliente.Edad);
-                //cmd.Parameters.AddWithValue("@documento", cliente.Documento);
-                //cmd.Parameters.AddWithValue("@dirrecion", cliente.Direccion);
-                //cmd.Parameters.AddWithValue("@correoElectronico", cliente.CorreoElectronico);
-                //cmd.Parameters.AddWithValue("@telefono", cliente.Telefono);
-
-                //cmd.ExecuteNonQuery();
-
-            }
-
-        }
+        
         public void GuardarCancha(Cancha cancha)
         {
             SqlConnection conn = new SqlConnection(cnn);
@@ -58,19 +35,17 @@ namespace Repositorio
 
         }
 
-        public void BorrarPersona(Persona persona)
+
+
+        public DataSet LlenarGrilla()
         {
-            SqlConnection conn = new SqlConnection(cnn);
+            DataSet ds = new DataSet();
+            //SqlConnection con = new SqlConnection(cnn);
+            //SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Persona", con);
 
-            {
+            //da.Fill(ds);
 
-                conn.Open();
-
-                string query = "delete from persona where apellido = @apellido";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@apellido", persona.Apellido);
-                cmd.ExecuteNonQuery();
-            }
+            return ds;
         }
     }
 }

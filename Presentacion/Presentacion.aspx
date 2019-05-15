@@ -3,59 +3,30 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   
-    <div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<h3>
-				Formulario de clientes
-			</h3>
-			
-				<div class="form-group">
-					 
-					<label for="exampleInputEmail1">
-						Email address
-					</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" />
-				</div>
-				<div class="form-group">
-					 
-					<label for="exampleInputPassword1">
-						Password
-					</label>
-					<input type="password" class="form-control" id="exampleInputPassword1" />
-				</div>
-				<div class="form-group">
-					 
-				</div> 
-				<button type="submit" class="btn btn-primary">
-					Submit
-				</button>
-			</form>
-		</div>
-	</div>
-</div>
+    <div class="jumbotron">
+  <h1>Bienvenido al sistema</h1>
+    <p class="lead">Sistema de gestion de clientes, canchas y turnos. Utiliza la barra de navegacion para acceder a todas las opciones.</p>
+    <p><a class="btn btn-lg btn-danger" href="FormularioCliente.aspx" role="button">Cargar un cliente</a></p>
+    </div>
 
-    <%--<div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Panel 1</h3>
-                        <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
+    <div class="row marketing">
+    <div class="col-lg-6">
+        <h4>Cargar Cliente</h4>
+        <p>Esta seccion le permitira cargar un cliente para asignarle un turno.</p>
 
-                           
+        <h4>Listar Clientes</h4>
+        <p>En esta seccion aparecen todos los clientes que esten cargados en la base de datos.</p>
+    </div>
 
-                            <p class="bg-success" style="padding: 10px; margin-top: 20px; clear: both"><small><a href="http://css-tricks.com/float-labels-css/" target="_blank">Link</a> to original article</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>--%>
-    <%--</div>--%>
-    <%--</div>--%>
+    <div class="col-lg-6">
+        <h4>Editar Informacion</h4>
+        <p>Esta seccion permite editar la informacion ya cargada de un cliente.</p>
+
+        <h4>Listar Turnos</h4>
+        <p>Esta seccion esta dedicada para ver un listado de todos los turnos.</p>
+    </div>
+    </div>
+    
 
 
     <script type="text/javascript">

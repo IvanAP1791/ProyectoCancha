@@ -76,6 +76,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="EditarCliente.aspx" />
+    <Content Include="FormularioCliente.aspx" />
+    <Content Include="Grilla.aspx" />
+    <Content Include="ListarCliente.aspx" />
     <Content Include="Presentacion.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -115,6 +119,34 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditarCliente.aspx.cs">
+      <DependentUpon>EditarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarCliente.aspx.designer.cs">
+      <DependentUpon>EditarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioCliente.aspx.cs">
+      <DependentUpon>FormularioCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FormularioCliente.aspx.designer.cs">
+      <DependentUpon>FormularioCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Grilla.aspx.cs">
+      <DependentUpon>Grilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Grilla.aspx.designer.cs">
+      <DependentUpon>Grilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListarCliente.aspx.cs">
+      <DependentUpon>ListarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarCliente.aspx.designer.cs">
+      <DependentUpon>ListarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion.aspx.cs">
       <DependentUpon>Presentacion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 using Repositorio;
+using System.Data;
+using System.Configuration;
+
 
 namespace Negocio
 {
@@ -12,10 +15,7 @@ namespace Negocio
     {
         CanchaRepo canchaRepo = new CanchaRepo();
 
-        public void GuardarCliente(Persona persona)
-        {
-            canchaRepo.GuardarCliente(persona);
-        }
+        
 
         public void GuardarCancha(Cancha cancha)
         {
@@ -25,9 +25,10 @@ namespace Negocio
         {
             canchaRepo.GuardarEncargado(encargado);
         }
-        public void BorrarPersona(Persona persona)
+       
+        public DataSet LlenarGrilla()
         {
-            canchaRepo.BorrarPersona(persona);
+            return canchaRepo.LlenarGrilla();
         }
     }
 }
