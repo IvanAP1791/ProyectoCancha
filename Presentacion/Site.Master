@@ -22,6 +22,7 @@
                     <li role="presentation"><a href="Presentacion.aspx">Inicio</a></li>
                     <li role="presentation"><a href="FormularioCliente.aspx">Cargar Cliente</a></li>
                     <li role="presentation"><a href="ListarCliente.aspx">Listar Clientes</a></li>
+                    <li role="presentation"><a href="ReservarTurno.aspx">Reservar Turno</a></li>
                 </ul>
             </nav>
             <h3 class="text-muted">Dallen Paddle</h3>

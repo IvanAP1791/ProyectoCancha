@@ -45,6 +45,7 @@
     <Compile Include="CanchaRepo.cs" />
     <Compile Include="ClienteRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TurnoRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dominio\Dominio.csproj">

@@ -8,13 +8,16 @@ namespace Dominio
 {
     public class Turnos
     {
-        enum FranjaHoraria {Matutino, Tarde, Noche};
+        string nombreReserva;
+        string FranjaHoraria;
         DateTime fecha;
         int NumCancha;
-        bool estado;
+        string estado;
 
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public int NumCancha1 { get => NumCancha; set => NumCancha = value; }
-        public bool Estado { get => estado; set => estado = value; }
+        public string Estado { get => estado; set => estado = value; }
+        public string NombreReserva { get => nombreReserva; set => nombreReserva = value; }
+        public string FranjaHoraria1 { get => FranjaHoraria; set => FranjaHoraria = value; }
     }
 }
