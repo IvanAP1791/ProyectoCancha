@@ -36,7 +36,6 @@ namespace Repositorio
             return dataTable;
         }
 
-
         public void GuardarCliente(Cliente cliente)
         {
             SqlConnection conn = new SqlConnection(cnn);
@@ -61,6 +60,7 @@ namespace Repositorio
             }
 
         }
+
         public void BorrarCliente(Cliente cliente)
         {
             SqlConnection conn = new SqlConnection(cnn);
@@ -72,6 +72,7 @@ namespace Repositorio
                 string query = "delete * from persona where idCliente = @idCliente";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@idCliente", cliente.IdCliente);
+
                 cmd.ExecuteNonQuery();
             }
         }

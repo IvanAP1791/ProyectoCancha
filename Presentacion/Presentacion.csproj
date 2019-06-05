@@ -75,6 +75,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\style.css" />
+    <Content Include="CrearCancha.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="EditarCliente.aspx" />
     <Content Include="FormularioCliente.aspx" />
@@ -103,6 +104,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="ListarCancha.aspx" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -119,6 +121,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearCancha.aspx.cs">
+      <DependentUpon>CrearCancha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrearCancha.aspx.designer.cs">
+      <DependentUpon>CrearCancha.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EditarCliente.aspx.cs">
       <DependentUpon>EditarCliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +170,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ListarCancha.aspx.cs">
+      <DependentUpon>ListarCancha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListarCancha.aspx.designer.cs">
+      <DependentUpon>ListarCancha.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

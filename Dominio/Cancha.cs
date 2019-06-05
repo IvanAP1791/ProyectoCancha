@@ -8,10 +8,12 @@ namespace Dominio
 {
     public class Cancha
     {
-        enum tipoCancha {Paddle, Tennis, Mixta};
+        enum TipoCancha { Paddle, Tennis, Mixta };
+        int idCancha;
         int numeroCancha;
         bool estado;
 
+        public int IdCancha { get => idCancha; set => idCancha = value; }
         public int NumeroCancha { get => numeroCancha; set => numeroCancha = value; }
         public bool Estado { get => estado; set => estado = value; }
     }

@@ -28,14 +28,15 @@ namespace Negocio
         {
             return clienteRepo.ListarCliente();
         }
+
         public void EditarCliente(Cliente cliente)
         {
             clienteRepo.EditarCliente(cliente);
         }
+
         public void ModificarCliente(Cliente cliente)
         {
             clienteRepo.ModificarCliente(cliente);
         }
-
     }
 }

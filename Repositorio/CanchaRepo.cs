@@ -24,28 +24,77 @@ namespace Repositorio
 
                 conn.Open();
 
-                string query = "INSERT INTO dbo.Cancha ( numeroCancha, estado  ) VALUES  ( '', '')";
+                string query = "INSERT INTO dbo.Cancha (numeroCancha, estado) VALUES  ('', '')";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@numeroCanche", cancha.NumeroCancha);
-                cmd.Parameters.AddWithValue("@numeroCanche", cancha.Estado);
+                cmd.Parameters.AddWithValue("@numeroCancha", cancha.NumeroCancha);
+                cmd.Parameters.AddWithValue("@estado", cancha.Estado);
+
+                cmd.ExecuteNonQuery();
             }
         }
-        public void GuardarEncargado(Encargado encargado)
-        {
 
+        public DataTable ListarCancha()
+        {
+            DataTable dt = new DataTable();
+
+            String query = "SELECT * from Cancha";
+
+            SqlConnection conn = new SqlConnection(cnn);
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand(query, conn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(dt);
+
+            conn.Close();
+
+            return dt;
         }
 
-
-
-        public DataSet LlenarGrilla()
+        public void BorrarCancha(Cancha cancha)
         {
-            DataSet ds = new DataSet();
-            //SqlConnection con = new SqlConnection(cnn);
-            //SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Persona", con);
+            SqlConnection conn = new SqlConnection(cnn);
+            {
+                conn.Open();
 
-            //da.Fill(ds);
+                string query = "DELETE * FROM Cancha WHERE idCancha = @idCancha";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@idcancha", cancha.IdCancha);
 
-            return ds;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void TraerCancha(Cancha cancha)
+        {
+            SqlConnection conn = new SqlConnection(cnn);
+            {
+                conn.Open();
+
+                string query = "SELECT * FROM dbo.Cancha WHERE idCancha = @idCancha";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@idCancha", cancha.IdCancha);
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void EditarCancha(Cancha cancha)
+        {
+            SqlConnection conn = new SqlConnection(cnn);
+            {
+                conn.Open();
+
+                string query = "UPDATE dbo.Cancha SET (numeroCancha=@numeroCancha,estado=@estado)";
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@numeroCancha", cancha.NumeroCancha);
+                cmd.Parameters.AddWithValue("@estado", cancha.Estado);
+
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }
