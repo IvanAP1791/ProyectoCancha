@@ -11,17 +11,19 @@
 
     <div class="row marketing">
     <div class="col-lg-6">
+
         <h4>Cargar Cliente</h4>
         <p>Esta seccion le permitira cargar un cliente para asignarle un turno.</p>
 
         <h4>Listar Clientes</h4>
         <p>En esta seccion aparecen todos los clientes que esten cargados en la base de datos.</p>
-    </div>
 
+    </div>
     <div class="col-lg-6">
+        <div>
         <h4>Editar Informacion</h4>
         <p>Esta seccion permite editar la informacion ya cargada de un cliente.</p>
-
+        </div>
         <h4>Listar Turnos</h4>
         <p>Esta seccion esta dedicada para ver un listado de todos los turnos.</p>
     </div>

@@ -12,7 +12,7 @@
                         </h3>
 
                         <div class="form-group">
-                            <asp:Label ID="lblNombre" runat="server" Text="Nombre"></asp:Label>
+                            <asp:Label ID="lblNombre" runat="server" Text="Nombre" ></asp:Label>
                             <asp:TextBox ID="txtNombre" type="text" runat="server" Class="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
