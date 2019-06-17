@@ -10,7 +10,7 @@
 namespace Presentacion {
     
     
-    public partial class Grilla {
+    public partial class GrillaTurno {
         
         /// <summary>
         /// Control form1.
@@ -22,30 +22,30 @@ namespace Presentacion {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control gdvGrilla.
+        /// Control gdvGrillaTurno.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gdvGrilla;
+        protected global::System.Web.UI.WebControls.GridView gdvGrillaTurno;
         
         /// <summary>
-        /// Control txtDocumento.
+        /// Control txtFranjaHoraria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDocumento;
+        protected global::System.Web.UI.WebControls.TextBox txtFranjaHoraria;
         
         /// <summary>
-        /// Control ddlDocumento.
+        /// Control ddlFranjaHoraria.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDocumento;
+        protected global::System.Web.UI.WebControls.DropDownList ddlFranjaHoraria;
     }
 }

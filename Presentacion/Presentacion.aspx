@@ -7,6 +7,8 @@
   <h1>Bienvenido al sistema</h1>
     <p class="lead">Sistema de gestion de clientes, canchas y turnos. Utiliza la barra de navegacion para acceder a todas las opciones.</p>
     <p><a class="btn btn-lg btn-danger" href="FormularioCliente.aspx" role="button">Cargar un cliente</a></p>
+        <p><a class="btn btn-lg btn-danger" href="ReservarTurno.aspx" role="button">Reservar un Turno</a></p>
+        <p><a class="btn btn-lg btn-danger" href="FormularioCancha.aspx" role="button">Cargar una Cancha</a></p>
     </div>
 
     <div class="row marketing">

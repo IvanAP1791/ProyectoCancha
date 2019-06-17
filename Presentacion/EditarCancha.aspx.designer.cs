@@ -10,61 +10,52 @@
 namespace Presentacion {
     
     
-    public partial class ReservarTurno {
+    public partial class EditarCancha {
         
         /// <summary>
-        /// lblNombreDeReserva control.
+        /// lblTipoCancha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNombreDeReserva;
+        protected global::System.Web.UI.WebControls.Label lblTipoCancha;
         
         /// <summary>
-        /// txtNombreDeReserva control.
+        /// ldsTipoCancha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombreDeReserva;
+        protected global::System.Web.UI.WebControls.LinqDataSource ldsTipoCancha;
         
         /// <summary>
-        /// lblFecha control.
+        /// ddlTipoCancha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFecha;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoCancha;
         
         /// <summary>
-        /// txtFecha control.
+        /// lblNumeroCancha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFecha;
+        protected global::System.Web.UI.WebControls.Label lblNumeroCancha;
         
         /// <summary>
-        /// lblNumCancha control.
+        /// txtNumeroCancha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNumCancha;
-        
-        /// <summary>
-        /// txtNumCancha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumCancha;
+        protected global::System.Web.UI.WebControls.TextBox txtNumeroCancha;
         
         /// <summary>
         /// lblEstado control.
@@ -76,6 +67,15 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.Label lblEstado;
         
         /// <summary>
+        /// ldsEstado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinqDataSource ldsEstado;
+        
+        /// <summary>
         /// ddlEstado control.
         /// </summary>
         /// <remarks>
@@ -85,30 +85,12 @@ namespace Presentacion {
         protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
         
         /// <summary>
-        /// lblFranjaHoraria control.
+        /// btnGuardarCancha control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblFranjaHoraria;
-        
-        /// <summary>
-        /// ddlFranjaHoraria control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFranjaHoraria;
-        
-        /// <summary>
-        /// GuardarTurno control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button GuardarTurno;
+        protected global::System.Web.UI.WebControls.Button btnGuardarCancha;
     }
 }

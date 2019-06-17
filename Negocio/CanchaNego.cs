@@ -15,20 +15,34 @@ namespace Negocio
     {
         CanchaRepo canchaRepo = new CanchaRepo();
 
-        
-
         public void GuardarCancha(Cancha cancha)
         {
             canchaRepo.GuardarCancha(cancha);
         }
-        public void GuardarEncargado(Encargado encargado)
+
+        public void BorrarCancha(Cancha cancha)
         {
-            canchaRepo.GuardarEncargado(encargado);
+            canchaRepo.BorrarCancha(cancha);
         }
-       
-        public DataSet LlenarGrilla()
+
+        public DataTable ListarCancha()
         {
-            return canchaRepo.LlenarGrilla();
+            return canchaRepo.ListarCancha();
+        }
+
+        public void EditarCancha(Cancha cancha)
+        {
+            canchaRepo.EditarCancha(cancha);
+        }
+
+        public void ModificarCancha(Cancha cancha)
+        {
+            canchaRepo.ModificarCancha(cancha);
+        }
+
+        public Cancha BuscarCanchaPorID(int idCancha)
+        {
+            return canchaRepo.BuscarCanchaPorID(idCancha);
         }
     }
 }

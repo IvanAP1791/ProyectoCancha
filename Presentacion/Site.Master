@@ -23,6 +23,9 @@
                     <li role="presentation"><a href="FormularioCliente.aspx">Cargar Cliente</a></li>
                     <li role="presentation"><a href="ListarCliente.aspx">Listar Clientes</a></li>
                     <li role="presentation"><a href="ReservarTurno.aspx">Reservar Turno</a></li>
+                    <li role="presentation"><a href="ListarTurno.aspx">Listar Turnos</a></li>
+                    <li role="presentation"><a href="FormularioCancha.aspx">Formulario Cancha</a></li>
+                    <li role="presentation"><a href="ListarCancha.aspx">Listar Canchas</a></li>
                 </ul>
             </nav>
             <h3 class="text-muted">Dallen Paddle</h3>
@@ -33,10 +36,12 @@
         </form>
 
         <footer class="footer">
-            <p>Realizado por Ivan Palomeque. © 2019 - Copyright </p>
+            <p>Realizado por Campos Rodrigo, Palomeque Ivan, Tala Gaston. © 2019 - Copyright </p>
         </footer>
 
     </div>
+
+    
 
 </body>
 </html>

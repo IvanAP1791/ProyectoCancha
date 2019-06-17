@@ -29,11 +29,14 @@ namespace Presentacion
 
             t1.NombreReserva = txtNombreDeReserva.Text;
             t1.Fecha = Convert.ToDateTime(txtFecha.Text);
-            t1.FranjaHoraria1 = ddlFranjaHoraria.Text;
-            t1.NumCancha1 = Convert.ToInt32(txtNumCancha.Text);
+            t1.NumCancha1 = txtNumCancha.Text;
             t1.Estado = ddlEstado.Text;
-
+            t1.FranjaHoraria1 = ddlFranjaHoraria.Text;
+            
+            
             turnoNego.GuardarTurno(t1);
+
+            Response.Redirect("./ListarTurno.aspx");
 
         }
     }

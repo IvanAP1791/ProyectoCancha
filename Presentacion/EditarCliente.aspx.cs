@@ -15,20 +15,26 @@ namespace Presentacion
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            string idCliente = Request["idCliente"].ToString();
+            int idCliente = int.Parse(Request["idCliente"].ToString());
 
             if (!Page.IsPostBack)
             {
 
-                RellenaCampos(); //si es la primera vez que carga la pagina rellena los campos
+                RellenaCampos(idCliente); //si es la primera vez que carga la pagina rellena los campos
 
             }
         }
 
-        protected void RellenaCampos()
+        protected void RellenaCampos(int idCliente)
         {
+
             if (Request.QueryString["idCliente"] != null)
             {
+                int IdCliente = Convert.ToInt32(Request.QueryString["idCliente"]);
+
+                Cliente cliente = clienteNego.BuscarClientePorID(idCliente);
+
+
                 txtNombre.Text = cliente.Nombre;
                 txtApellido.Text = cliente.Apellido;
                 txtEdad.Text = cliente.Edad.ToString();
@@ -41,7 +47,10 @@ namespace Presentacion
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            cliente.Nombre = txtNombre.Text;  
+            int IdCliente = Convert.ToInt32(Request.QueryString["idCliente"]);
+
+            cliente.IdCliente = IdCliente;
+            cliente.Nombre = txtNombre.Text;
             cliente.Apellido = txtApellido.Text;
             cliente.Edad = Convert.ToInt32(txtEdad.Text);
             cliente.Documento = txtDocumento.Text;
@@ -49,8 +58,10 @@ namespace Presentacion
             cliente.CorreoElectronico = txtCorreo.Text;
             cliente.Telefono = Convert.ToInt32(txtTelefono.Text);
 
-            clienteNego.GuardarCliente(cliente);
-            
+            clienteNego.ModificarCliente(cliente);
+
+            Response.Redirect("./ListarCliente.aspx");
+
         }
     }
 }

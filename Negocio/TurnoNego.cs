@@ -19,14 +19,29 @@ namespace Negocio
             turnoRepo.GuardarTurno(turno);
         }
 
-        public void EditarTurno(Turnos turno)
+        public void ModificarTurno(Turnos turno)
         {
-            turnoRepo.EditarTurno(turno);
+            turnoRepo.ModificarTurno(turno);
         }
 
         public void BorrarTurno(Turnos turno)
         {
             turnoRepo.BorrarTurno(turno);
+        }
+
+        public DataTable ListarTurno()
+        {
+            return turnoRepo.ListarTurno();
+        }
+
+        public void EditarTurno(Turnos turnos)
+        {
+            turnoRepo.EditarTurno(turnos);
+        }
+
+        public Turnos BuscarTurnoPorId(int turnos_Id)
+        {
+            return turnoRepo.BuscarTurnoPorId(turnos_Id);
         }
     }
 }

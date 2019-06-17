@@ -36,6 +36,9 @@ namespace Negocio
         {
             clienteRepo.ModificarCliente(cliente);
         }
-
+        public Cliente BuscarClientePorID(int idCliente)
+        {
+            return clienteRepo.BuscarClientePorID(idCliente);
+        }
     }
 }

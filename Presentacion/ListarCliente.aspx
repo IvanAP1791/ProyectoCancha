@@ -20,7 +20,7 @@
                     <ItemTemplate>
                         <%--<asp:Button ID="btnEditar" OnClick="btnEditar_Click"  CommandArgument='<%# Eval("IdCliente") %>' runat="server" Text="Editar" CssClass="btn btn-warning" />--%>
                          <asp:LinkButton ID="lnkEdit" OnCommand="lnkEdit_Command"  runat="server" Text="Editar" CommandArgument='<%# Eval("IdCliente") %>' CssClass="btn btn-Warning" CommandName="lnkEditar" Font-Underline="false" />
-                        
+                        <asp:LinkButton ID="lnkDelete" OnCommand="lnkDelete_Command"  runat="server" Text="Borrar" CommandArgument='<%# Eval("IdCliente") %>' CssClass="btn btn-Warning" CommandName="lnkBorrar" Font-Underline="false" />
                     </ItemTemplate>
                 </asp:TemplateField>
                 </Columns>

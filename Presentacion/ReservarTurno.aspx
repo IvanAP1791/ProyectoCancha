@@ -22,6 +22,20 @@
                         </div>
 
                         <div class="form-group">
+                            <asp:Label ID="lblNumCancha" runat="server" Text="Numero de Cancha" ></asp:Label>
+                            <asp:TextBox ID="txtNumCancha" runat="server" Class="form-control"></asp:TextBox>                           
+                        </div>
+
+                         <div class="form-group">
+                            <asp:Label ID="lblEstado" runat="server" Text="Estado"></asp:Label>   
+                            <asp:DropDownList ID="ddlEstado" runat="server" Class="form-control">
+                                <asp:ListItem Text ="Seleccionar" Value="Seleccionar"></asp:ListItem>
+                                <asp:ListItem Text ="Libre" Value="Libre"></asp:ListItem>
+                                <asp:ListItem Text ="Ocupado" Value="Ocupado"></asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+
+                        <div class="form-group">
                             <asp:Label ID="lblFranjaHoraria" runat="server" Text="Franja Horaria"></asp:Label>   
                             <asp:DropDownList ID="ddlFranjaHoraria" runat="server" Class="form-control">
                                 <asp:ListItem Text ="Seleccionar" Value="Seleccionar"></asp:ListItem>
@@ -31,19 +45,9 @@
                             </asp:DropDownList>
                         </div>
 
-                        <div class="form-group">
-                            <asp:Label ID="lblNumCancha" runat="server" Text="Numero de Cancha" ></asp:Label>
-                            <asp:TextBox ID="txtNumCancha" runat="server" Class="form-control"></asp:TextBox>                           
-                        </div>
+                        
 
-                          <div class="form-group">
-                            <asp:Label ID="lblEstado" runat="server" Text="Estado"></asp:Label>   
-                            <asp:DropDownList ID="ddlEstado" runat="server" Class="form-control">
-                                <asp:ListItem Text ="Seleccionar" Value="Seleccionar"></asp:ListItem>
-                                <asp:ListItem Text ="Libre" Value="Libre"></asp:ListItem>
-                                <asp:ListItem Text ="Ocupado" Value="Ocupado"></asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
+                         
 
                         <asp:Button ID="GuardarTurno" runat="server" OnClick="GuardarTurno_Click" Class="btn btn-success" Text="Guardar" />
 

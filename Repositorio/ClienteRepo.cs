@@ -47,7 +47,7 @@ namespace Repositorio
 
                 string query = "INSERT INTO dbo.Cliente (  nombre, apellido, edad, documento, direccion, correoElectronico, telefono  ) VALUES  (  @nombre, @apellido, @edad, @documento, @direccion, @correoElectronico, @telefono)";
                 SqlCommand cmd = new SqlCommand(query, conn);
-                
+
                 cmd.Parameters.AddWithValue("@nombre", cliente.Nombre);
                 cmd.Parameters.AddWithValue("@apellido", cliente.Apellido);
                 cmd.Parameters.AddWithValue("@edad", cliente.Edad);
@@ -69,7 +69,7 @@ namespace Repositorio
 
                 conn.Open();
 
-                string query = "delete * from persona where idCliente = @idCliente";
+                string query = "DELETE FROM dbo.Cliente WHERE idCliente = @idCliente";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@idCliente", cliente.IdCliente);
                 cmd.ExecuteNonQuery();
@@ -91,14 +91,15 @@ namespace Repositorio
 
         public void ModificarCliente(Cliente cliente)
         {
-            
+
             SqlConnection conn = new SqlConnection(cnn);
             {
                 conn.Open();
 
-                string query = "UPDATE dbo.Cliente SET (  nombre = @nombre, apellido = @apellido, edad = @edad, documento = @documento, direccion = @direccion, correoElectronico = @correoElectronico, telefono = @telefono )";
+                string query = "UPDATE dbo.Cliente SET  nombre = @nombre, apellido = @apellido, edad = @edad, documento = @documento, direccion = @direccion, correoElectronico = @correoElectronico, telefono = @telefono WHERE idCliente = @idCliente";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
+                cmd.Parameters.AddWithValue("@idCliente", cliente.IdCliente);
                 cmd.Parameters.AddWithValue("@nombre", cliente.Nombre);
                 cmd.Parameters.AddWithValue("@apellido", cliente.Apellido);
                 cmd.Parameters.AddWithValue("@edad", cliente.Edad);
@@ -109,6 +110,53 @@ namespace Repositorio
 
                 cmd.ExecuteNonQuery();
             }
+        }
+        public Cliente BuscarClientePorID(int idCliente)
+        {
+            Cliente cliente = new Cliente();
+
+            SqlDataReader sdr = null;
+
+            string query = "SELECT * FROM Cliente WHERE idCliente = @idCliente";
+
+            SqlConnection conn = new SqlConnection(cnn);
+
+            try
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@idCliente", idCliente);
+
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
+
+                sdr = cmd.ExecuteReader();
+
+                sdr.Read();
+
+                cliente.IdCliente = Convert.ToInt32(sdr["IdCliente"].ToString());
+                cliente.Nombre = sdr["Nombre"].ToString();
+                cliente.Apellido = sdr["Apellido"].ToString();
+                cliente.Edad = Convert.ToInt32(sdr["Edad"].ToString());
+                cliente.Documento = sdr["Documento"].ToString();
+                cliente.Direccion = sdr["Direccion"].ToString();
+                cliente.CorreoElectronico = sdr["CorreoElectronico"].ToString();
+                cliente.Telefono = Convert.ToInt32(sdr["Telefono"].ToString());
+
+            }
+            catch (System.Data.SqlClient.SqlException ex)
+            {
+                string msg = "Insert Error:";
+                msg += ex.Message;
+                throw new Exception(msg);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return cliente;
         }
     }
 }
